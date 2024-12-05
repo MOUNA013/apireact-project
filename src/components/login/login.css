@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Playfair+Display:wght@700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, #1A1A2E, #2E2E46, #3A4C71); /* Advanced gradient */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+    animation: pulseBackground 12s infinite alternate ease-in-out;
+}
+
+
+@keyframes pulseBackground {
+    0%, 100% {
+        background: linear-gradient(135deg, #1A1A2E, #2E2E46, #3A4C71);
+    }
+    50% {
+        background: linear-gradient(135deg, #3A4C71, #2E2E46, #1A1A2E);
+    }
+}
+
+.login {
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    padding: 50px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    backdrop-filter: blur(12px);
+    animation: fadeIn 1.5s ease;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px; /* Larger title font size */
+    color: #CBB982; /* Golden Beige */
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+    transition: transform 0.3s ease;
+}
+
+
+h2:hover {
+    transform: scale(1.05);
+}
+
+.loginform {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #CBB982; /* Golden Beige */
+    border-radius: 10px;
+    font-size: 18px; /* Increased input font size */
+    background: #2E2E46; /* Midnight Blue */
+    color: #E8E8E8; /* Ivory White */
+    font-family: 'Quicksand', sans-serif;
+    outline: none;
+    transition: box-shadow 0.3s ease, transform 0.2s;
+}
+
+input:focus {
+    border-color: #F1E3C6; /* Warm Champagne */
+    box-shadow: 0 4px 15px rgba(201, 185, 130, 0.5);
+    transform: scale(1.05);
+}
+
+.loginbutton {
+    background: linear-gradient(145deg, #CBB982, #F1E3C6); /* Golden gradient */
+    color: #1A1A2E; /* Deep Navy */
+    font-size: 20px; /* Increased button font size */
+    font-weight: bold;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px) scale(1.08);
+    box-shadow: 0 5px 20px rgba(203, 185, 130, 0.4);
+}
+
+button:active {
+    transform: scale(0.98);
+    box-shadow: none;
+}
+
+
+@media (max-width: 768px) {
+    .login {
+        padding: 30px;
+        width: 80%;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    input {
+        font-size: 16px;
+    }
+    button {
+        font-size: 18px;
+    }
+}
