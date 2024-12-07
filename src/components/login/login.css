@@ -12,7 +12,6 @@ body {
     animation: pulseBackground 12s infinite alternate ease-in-out;
 }
 
-
 @keyframes pulseBackground {
     0%, 100% {
         background: linear-gradient(135deg, #1A1A2E, #2E2E46, #3A4C71);
@@ -22,8 +21,8 @@ body {
     }
 }
 
-.login {
-    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+#login-container {
+    background: rgba(255, 255, 255, 0.1); 
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     padding: 50px;
@@ -33,7 +32,6 @@ body {
     backdrop-filter: blur(12px);
     animation: fadeIn 1.5s ease;
 }
-
 
 @keyframes fadeIn {
     from {
@@ -46,10 +44,10 @@ body {
     }
 }
 
-h2 {
+#login-title {
     font-family: 'Playfair Display', serif;
-    font-size: 36px; /* Larger title font size */
-    color: #CBB982; /* Golden Beige */
+    font-size: 36px; 
+    color: #CBB982; 
     margin-bottom: 30px;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -57,39 +55,40 @@ h2 {
     transition: transform 0.3s ease;
 }
 
-
-h2:hover {
+#login-title:hover {
     transform: scale(1.05);
 }
 
-.loginform {
+#login-form {
     display: flex;
     flex-direction: column;
     gap: 25px;
 }
 
-input {
+#input-cin,
+#input-password {
     padding: 10px;
-    border: 1px solid #CBB982; /* Golden Beige */
+    border: 1px solid #CBB982; 
     border-radius: 10px;
-    font-size: 18px; /* Increased input font size */
-    background: #2E2E46; /* Midnight Blue */
-    color: #E8E8E8; /* Ivory White */
+    font-size: 18px; 
+    background: #2E2E46; 
+    color: #E8E8E8; 
     font-family: 'Quicksand', sans-serif;
     outline: none;
     transition: box-shadow 0.3s ease, transform 0.2s;
 }
 
-input:focus {
-    border-color: #F1E3C6; /* Warm Champagne */
+#input-cin:focus,
+#input-password:focus {
+    border-color: #F1E3C6; 
     box-shadow: 0 4px 15px rgba(201, 185, 130, 0.5);
     transform: scale(1.05);
 }
 
-.loginbutton {
-    background: linear-gradient(145deg, #CBB982, #F1E3C6); /* Golden gradient */
-    color: #1A1A2E; /* Deep Navy */
-    font-size: 20px; /* Increased button font size */
+#login-button {
+    background: linear-gradient(145deg, #CBB982, #F1E3C6); 
+    color: #1A1A2E; 
+    font-size: 20px; 
     font-weight: bold;
     padding: 14px;
     border: none;
@@ -99,29 +98,29 @@ input:focus {
     transition: all 0.3s ease;
 }
 
-button:hover {
+#login-button:hover {
     transform: translateY(-3px) scale(1.08);
     box-shadow: 0 5px 20px rgba(203, 185, 130, 0.4);
 }
 
-button:active {
+#login-button:active {
     transform: scale(0.98);
     box-shadow: none;
 }
 
-
 @media (max-width: 768px) {
-    .login {
+    #login-container {
         padding: 30px;
         width: 80%;
     }
-    h2 {
+    #login-title {
         font-size: 30px;
     }
-    input {
+    #input-cin,
+    #input-password {
         font-size: 16px;
     }
-    button {
+    #login-button {
         font-size: 18px;
     }
 }

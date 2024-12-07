@@ -1,12 +1,16 @@
-#logoutbutton{
-   
-        background-color:'#FF6B6B',
-        color=white,
-        padding= 10px 20px,
-        border= 'none',
-        borderRadius= '8px',
-        fontSize= '16px',
-        cursor= 'pointer',
-        transition= '0.3s ease',
-    
-};
+#logoutbutton {
+        background-image: url('logout.svg');
+        background-size: 40px 43px; 
+        background-repeat: no-repeat;
+        background-color: transparent ;
+
+       
+        position: absolute;
+        top: 10px;
+        left: 95%; 
+        width: 40px; 
+        height: 40px; 
+        border: none;
+        cursor: pointer;
+      }
+      

@@ -1,6 +1,6 @@
-#addnoteform {
+#update-note-form {
     position: absolute;
-    top: 35%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(255, 255, 255, 0.1);
@@ -8,85 +8,92 @@
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     width: 500px;
-    height: 300px;
+    height: 300PX;
     max-width: 100%;
     text-align: center;
     backdrop-filter: blur(12px);
-}
-
-#addnoteform label {
+  }
+  
+  #update-note-form label {
     display: block;
     margin-bottom: 10px;
-}
-
-#input-title, #input-content {
+  }
+  
+  #updated-title, #updated-content {
     width: 100%;
     padding: 5px;
     margin: 5px 0 15px;
-    border: 1px solid #CBB982;
+    border: 1px solid #CBB982; 
     border-radius: 10px;
     font-size: 18px;
-    background: #2E2E46;
-    color: #E8E8E8;
+    background: #2E2E46; 
+    color: #E8E8E8; 
     font-family: 'Quicksand', sans-serif;
     outline: none;
     transition: box-shadow 0.3s ease, transform 0.2s;
-}
-
-#input-title:focus, #input-content:focus {
-    border-color: #F1E3C6;
+  }
+  
+  #updated-title:focus, #updated-content:focus {
+    border-color: #F1E3C6; 
     box-shadow: 0 4px 15px rgba(201, 185, 130, 0.5);
     transform: scale(1.05);
-}
-
-#save-note-button {
-    background: linear-gradient(145deg, #CBB982, #F1E3C6);
-    color: #1A1A2E;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 14px;
+  }
+  
+  #update-note-button, #cancel-button {
+    padding: 10px 20px;
+    margin: 10px 0;
     border: none;
     border-radius: 12px;
     cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
     font-family: 'Quicksand', sans-serif;
     transition: all 0.3s ease;
-}
-
-#save-note-button:hover {
+  }
+  
+  #update-note-button {
+    background-color: #CBB982; 
+    color: #1A1A2E; 
+  }
+  
+  #update-note-button:hover {
     transform: translateY(-3px) scale(1.08);
     box-shadow: 0 5px 20px rgba(203, 185, 130, 0.4);
-}
-
-#save-note-button:active {
-    transform: scale(0.98);
-    box-shadow: none;
-}
-
-@media (max-width: 768px) {
-    #addnoteform {
-        padding: 30px;
-        width: 80%;
+  }
+  
+  #cancel-button {
+    background-color: #F44336; 
+    color: white;
+  }
+  
+  #cancel-button:hover {
+    background-color: #D32F2F;
+  }
+  
+  @media (max-width: 768px) {
+    #update-note-form {
+      padding: 20px;
+      width: 80%;
     }
-
-    #input-title, #input-content {
-        font-size: 16px;
+    #updated-title, #updated-content {
+      font-size: 16px;
     }
-
-    #save-note-button {
-        font-size: 18px;
+    #update-note-button, #cancel-button {
+      font-size: 16px;
     }
-}
-
-#share-with {
+  }
+  #share-with{
     width: 100%;
     padding: 10px;
     margin: 5px 0 15px;
-    border: 1px solid #CBB982;
+    border: 1px solid #CBB982; 
     border-radius: 10px;
     font-size: 18px;
-    background: #2E2E46;
-    color: #E8E8E8;
+    background: #2E2E46; 
+    color: #0a0606; 
     font-family: 'Quicksand', sans-serif;
     outline: none;
     transition: box-shadow 0.3s ease, transform 0.2s;
-}
+
+  }
+  

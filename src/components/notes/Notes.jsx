@@ -1,15 +1,16 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import CreateNote from "../CREATEOTE/CreateNote";
-import DeleteNote from "./DeleteNote"; 
-import UpdateNote from "./UpdateNote"; 
+import DeleteNote from "../DELETENOTE/DeleteNote"; 
+import UpdateNote from "../UPDATNOTE/UpdateNote"; 
 import "./Notes.css";
+import Logout from "../logout/logout";
 
 function Notes() {
   const [notes, setNotes] = useState([]);
   const [clicked, setClicked] = useState(false);
-  const [isEditing, setIsEditing] = useState(false); // State for edit mode
-  const [currentNote, setCurrentNote] = useState(null); // State to store the note being edited
+  const [isEditing, setIsEditing] = useState(false); 
+  const [currentNote, setCurrentNote] = useState(null); 
 
   
   const getNotes = async () => {
@@ -28,7 +29,7 @@ function Notes() {
 
   useEffect(() => {
     getNotes();
-  }, [notes]);
+  }, []);
 
   
   const handleCreateNote = () => {
@@ -45,6 +46,7 @@ function Notes() {
 
   return (
     <div className="noteslist">
+      <Logout/>
       <h1>Les Notes</h1>
       <ul>
         {notes.map((note) => (
@@ -59,7 +61,7 @@ function Notes() {
         ))}
       </ul>
       <button id="creatbutton" onClick={handleCreateNote}>+</button>
-      {clicked && <CreateNote setNotes={setNotes} />}
+      {clicked && <CreateNote setNotes={setNotes} setClicked={setClicked} />}
       
       
       {isEditing && currentNote && (
